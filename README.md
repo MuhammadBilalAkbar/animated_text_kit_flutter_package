@@ -15,13 +15,7 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-**Watch this video to learn how to fill this template
-below:** https://www.youtube.com/watch?v=m63oH2RUvjc
-
-**Any new Flutter Project ideas
-needed?** [Choose Project Idea From This List](https://docs.google.com/document/d/1e42zZoIfJZyCBzrTzxv28fSsN0KFrMN6SDzDVBM67tc/edit?usp=sharing)
-
-## 1. Research: Project Title
+## 1. Research: Animated Text Kit Flutter Package
 
 - Keywords:
     - animated text kit flutter package
@@ -145,10 +139,14 @@ needed?** [Choose Project Idea From This List](https://docs.google.com/document/
 
 1. Run `dart pub add animated_text_kit` to this package in your project's pubspec.yaml file.
 2. Also add some fonts in your pubspec.yaml file to have different types of fonts in animations.
-3. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
+3. Output of project:
+
+        
+
+4. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
    HomePage widget.
-4. `home_page.dart` file contains 10 ElevatedButtons for different types of animations.
-5. To animated text using animated_text_kit flutter package:
+5. `home_page.dart` file contains 10 ElevatedButtons for different types of animations.
+6. To animated text using animated_text_kit flutter package:
     - First use `AnimatedTextKit` widget. `animatedTexts` is its required property of
       AnimatedTextKit widget which accepts List<AnimatedText> of types written above.
     - Except `TextLiquidFill` animation, all animations are used within the `animatedTexts` property
@@ -161,7 +159,7 @@ needed?** [Choose Project Idea From This List](https://docs.google.com/document/
 
       ![screenshot](screenshots/AnimatedTextKitProperties.png)
 
-6. `rotate_animations_page.dart` contains Rotate animations using `RotateAnimatedText` in list
+7. `rotate_animations_page.dart` contains Rotate animations using `RotateAnimatedText` in list
    of `animatedText` property:
 
 ```dart 
@@ -193,15 +191,15 @@ needed?** [Choose Project Idea From This List](https://docs.google.com/document/
         ),
 ```
 
-7. `fade_animations_page.dart` contains Fade animations using `FadeAnimatedText` in list
+8. `fade_animations_page.dart` contains Fade animations using `FadeAnimatedText` in list
    of `animatedText` property.
-8. `typer_animations_page.dart` contains Typer animations using `TyperAnimatedText` in list
+9. `typer_animations_page.dart` contains Typer animations using `TyperAnimatedText` in list
    of `animatedText` property.
-9. `typewriter_animations_page.dart` contains TypeWriter animations using `TypewriterAnimatedText`
+10. `typewriter_animations_page.dart` contains TypeWriter animations using `TypewriterAnimatedText`
    in list of `animatedText` property.
-10. `scale_animations_page.dart` contains Scale animations using `ScaleAnimatedText` in list
+11. `scale_animations_page.dart` contains Scale animations using `ScaleAnimatedText` in list
     of `animatedText` property.
-11. `colorize_animations_page.dart` contains Colorize animations using `ColorizeAnimatedText` in
+12. `colorize_animations_page.dart` contains Colorize animations using `ColorizeAnimatedText` in
     list of `animatedText` property:
 
 ```dart
@@ -266,13 +264,13 @@ class ColorizeAnimationsPage extends StatelessWidget {
 Every `ColorizeAnimatedText` widget uses same textStyle and list of colors. isRepeatingAnimation is
 set to true.
 
-12. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
+13. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
     using `TextLiquidFill` directly without using `AniamtedTextKit` widget.
-13. `wavy_animations_page.dart` contains Wavy animations using `WavyAnimatedText` in list
+14. `wavy_animations_page.dart` contains Wavy animations using `WavyAnimatedText` in list
     of `animatedText` property.
-14. `flicker_animations_page.dart` contains Flicker animations using `FlickerAnimatedText` in list
+15. `flicker_animations_page.dart` contains Flicker animations using `FlickerAnimatedText` in list
     of `animatedText` property.
-5. `mixed_animations_page.dart` contains mixed types of animations:
+16. `mixed_animations_page.dart` contains mixed types of animations:
 
 ```dart
 import 'package:flutter/material.dart';
