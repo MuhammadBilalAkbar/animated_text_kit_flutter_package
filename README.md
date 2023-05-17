@@ -142,7 +142,7 @@ samples, guidance on mobile development, and a full API reference.
 3. Output of project:
 
 [//]: # (https://github.com/HeyFlutter-Team/projects_mohammad/assets/87815800/7cd1d638-c33f-4c6e-af86-0361d32e89b8)
-
+https://github.com/MuhammadBilalAkbar/animated_text_kit_flutter_package/assets/87815800/a59fc874-5122-4df5-9cfe-15c38bf49fe9
 
 4. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
    HomePage widget.
