@@ -141,7 +141,8 @@ samples, guidance on mobile development, and a full API reference.
 2. Also add some fonts in your pubspec.yaml file to have different types of fonts in animations.
 3. Output of project:
 
-https://github.com/HeyFlutter-Team/projects_mohammad/assets/87815800/7cd1d638-c33f-4c6e-af86-0361d32e89b8
+[//]: # (https://github.com/HeyFlutter-Team/projects_mohammad/assets/87815800/7cd1d638-c33f-4c6e-af86-0361d32e89b8)
+
 
 4. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
    HomePage widget.
