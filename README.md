@@ -140,16 +140,13 @@ samples, guidance on mobile development, and a full API reference.
 1. Run `dart pub add animated_text_kit` to this package in your project's pubspec.yaml file.
 2. Also add some fonts in your pubspec.yaml file to have different types of fonts in animations.
 3. Output of project:
-
-[//]: # (https://github.com/HeyFlutter-Team/projects_mohammad/assets/87815800/7cd1d638-c33f-4c6e-af86-0361d32e89b8)
-https://github.com/MuhammadBilalAkbar/animated_text_kit_flutter_package/assets/87815800/a59fc874-5122-4df5-9cfe-15c38bf49fe9
-
+    ![](AnimatedTextKitFlutterPackage.webm)
 4. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
    HomePage widget.
 5. `home_page.dart` file contains 10 ElevatedButtons for different types of animations.
-6. To animated text using animated_text_kit flutter package:
+6. To animate text using animated_text_kit flutter package:
     - First use `AnimatedTextKit` widget. `animatedTexts` is its required property of
-      AnimatedTextKit widget which accepts List<AnimatedText> of types written above.
+      AnimatedTextKit widget accepts List<AnimatedText> of types written above.
     - Except `TextLiquidFill` animation, all animations are used within the `animatedTexts` property
       of `AnimatedTextKit`. **`TextLiquidFill` is used directly without using `AnimatedTextKit`
       widget.**
@@ -160,123 +157,43 @@ https://github.com/MuhammadBilalAkbar/animated_text_kit_flutter_package/assets/8
 
       ![screenshot](screenshots/AnimatedTextKitProperties.png)
 
-7. `rotate_animations_page.dart` contains Rotate animations using `RotateAnimatedText` in list
-   of `animatedText` property:
-
+7. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
+    using `TextLiquidFill` directly without wrapping it with `AniamtedTextKit` widget.
 ```dart 
-    body: Center(
-          child: Row(
-            children: [
-              const SizedBox(width: 20.0, height: 100.0),
-              const Text(
-                'Be',
-                style: TextStyle(fontSize: 43.0),
-              ),
-              const SizedBox(width: 20.0, height: 100.0),
-              DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 40.0,
-                  fontFamily: 'Horizon',
-                ),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    RotateAnimatedText('AWESOME'),
-                    RotateAnimatedText('OPTIMISTIC'),
-                    RotateAnimatedText('DIFFERENT'),
-                  ],
-                  onTap: () => debugPrint("Tap Event Rotate Animations Page"),
-                ),
-              ),
-            ],
+Scaffold(
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Center(
+          child: TextLiquidFill(
+            text: 'HEY FLUTTER COM',
+            waveColor: Colors.blueAccent,
+            boxBackgroundColor: Colors.redAccent,
+            textStyle: const TextStyle(
+              fontSize: 80.0,
+              fontWeight: FontWeight.bold,
+            ),
+            boxHeight: 300.0,
           ),
         ),
+      );
 ```
 
-8. `fade_animations_page.dart` contains Fade animations using `FadeAnimatedText` in list
-   of `animatedText` property.
-9. `typer_animations_page.dart` contains Typer animations using `TyperAnimatedText` in list
-   of `animatedText` property.
-10. `typewriter_animations_page.dart` contains TypeWriter animations using `TypewriterAnimatedText`
-    in list of `animatedText` property.
-11. `scale_animations_page.dart` contains Scale animations using `ScaleAnimatedText` in list
-    of `animatedText` property.
-12. `colorize_animations_page.dart` contains Colorize animations using `ColorizeAnimatedText` in
-    list of `animatedText` property:
+9. We can also implement:
+    - RotateAnimatedText
+    - FadeAnimatedText
+    - TyperAnimatedText
+    - TypewriterAnimatedText
+    - ScaleAnimatedText
+    - ColorizeAnimatedText
+    - WavyAnimatedText
+    - FlickerAnimatedText
+
+`mixed_animations_page.dart` contains all above types of animations:
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-
-class ColorizeAnimationsPage extends StatelessWidget {
-  const ColorizeAnimationsPage(this.title, {Key? key}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    const colorizeColors = [
-      Colors.purple,
-      Colors.blue,
-      Colors.yellow,
-      Colors.red,
-    ];
-
-    const colorizeTextStyle = TextStyle(
-      fontSize: 50.0,
-      fontFamily: 'Horizon',
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: SizedBox(
-          width: 250.0,
-          child: AnimatedTextKit(
-            animatedTexts: [
-              ColorizeAnimatedText(
-                'Larry Page',
-                textStyle: colorizeTextStyle,
-                colors: colorizeColors,
-              ),
-              ColorizeAnimatedText(
-                'Bill Gates',
-                textStyle: colorizeTextStyle,
-                colors: colorizeColors,
-              ),
-              ColorizeAnimatedText(
-                'Steve Jobs',
-                textStyle: colorizeTextStyle,
-                colors: colorizeColors,
-              ),
-            ],
-            isRepeatingAnimation: true,
-            onTap: () => debugPrint("Tap Event Colorize Animations Page"),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-```
-
-Every `ColorizeAnimatedText` widget uses same textStyle and list of colors. isRepeatingAnimation is
-set to true.
-
-13. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
-    using `TextLiquidFill` directly without using `AniamtedTextKit` widget.
-14. `wavy_animations_page.dart` contains Wavy animations using `WavyAnimatedText` in list
-    of `animatedText` property.
-15. `flicker_animations_page.dart` contains Flicker animations using `FlickerAnimatedText` in list
-    of `animatedText` property.
-16. `mixed_animations_page.dart` contains mixed types of animations:
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
-
 class MixedAnimationsPage extends StatelessWidget {
   const MixedAnimationsPage(this.title, {Key? key}) : super(key: key);
 
@@ -294,31 +211,67 @@ class MixedAnimationsPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AnimatedTextKit(
+              totalRepeatCount: 10,
               animatedTexts: [
-                TypewriterAnimatedText(
-                  'Hello world!',
+                RotateAnimatedText(
+                  'RotateAnimatedText',
                   textStyle: textStyle,
-                  speed: const Duration(milliseconds: 100),
+                  duration: const Duration(seconds: 3),
                 ),
               ],
-              totalRepeatCount: 4,
               pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
             ),
-            const SizedBox(height: 20),
             AnimatedTextKit(
+              totalRepeatCount: 10,
               animatedTexts: [
-                TyperAnimatedText('Android', textStyle: textStyle),
-                TyperAnimatedText('iOS', textStyle: textStyle),
-                TyperAnimatedText('Mac', textStyle: textStyle),
-                ScaleAnimatedText('Scale', textStyle: textStyle),
-                RotateAnimatedText('Rotated', textStyle: textStyle),
+                FadeAnimatedText(
+                  'FadeAnimatedText',
+                  textStyle: textStyle,
+                  duration: const Duration(seconds: 3),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                TyperAnimatedText(
+                  'TyperAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(milliseconds: 400),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'TypewriterAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(milliseconds: 400),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              repeatForever: true,
+              animatedTexts: [
+                ScaleAnimatedText(
+                  'ScaleAnimatedText',
+                  textStyle: textStyle,
+                  duration: const Duration(seconds: 1),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              isRepeatingAnimation: true,
+              repeatForever: true,
+              animatedTexts: [
                 ColorizeAnimatedText(
-                  'Colorize',
+                  'ColorizeAnimatedText',
                   textStyle: textStyle,
                   colors: [
                     Colors.red,
@@ -327,16 +280,26 @@ class MixedAnimationsPage extends StatelessWidget {
                     Colors.purple,
                     Colors.blue,
                   ],
-                ),
-                FadeAnimatedText('Fade First', textStyle: textStyle),
-                ScaleAnimatedText(
-                  'Then Scale',
-                  textStyle: const TextStyle(
-                    fontSize: 70.0,
-                    fontFamily: 'Canterbury',
-                  ),
+                  speed: const Duration(seconds: 1),
                 ),
               ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                WavyAnimatedText(
+                  'WavyAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(seconds: 1),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              repeatForever: true,
+              animatedTexts: [
+                FlickerAnimatedText('FlickerAnimatedText', textStyle: textStyle),
+              ],
+              onTap: () => debugPrint("Tap Event Flicker Animations Page"),
             ),
           ],
         ),
@@ -344,5 +307,4 @@ class MixedAnimationsPage extends StatelessWidget {
     );
   }
 }
-
 ```

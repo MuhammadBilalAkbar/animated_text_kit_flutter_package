@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              minimumSize: const Size(250, 60),
+              minimumSize: const Size(300, 60),
               backgroundColor: Colors.blueGrey,
               textStyle: const TextStyle(
                 fontSize: 22,

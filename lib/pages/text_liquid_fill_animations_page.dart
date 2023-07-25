@@ -12,18 +12,15 @@ class TextLiquidFillAnimationsPage extends StatelessWidget {
           title: Text(title),
         ),
         body: Center(
-          child: SizedBox(
-            width: 250.0,
-            child: TextLiquidFill(
-              text: 'LIQUIDY',
-              waveColor: Colors.blueAccent,
-              boxBackgroundColor: Colors.redAccent,
-              textStyle: const TextStyle(
-                fontSize: 70.0,
-                fontWeight: FontWeight.bold,
-              ),
-              boxHeight: 300.0,
+          child: TextLiquidFill(
+            text: 'HEY FLUTTER COM',
+            waveColor: Colors.blueAccent,
+            boxBackgroundColor: Colors.redAccent,
+            textStyle: const TextStyle(
+              fontSize: 80.0,
+              fontWeight: FontWeight.bold,
             ),
+            boxHeight: 300.0,
           ),
         ),
       );

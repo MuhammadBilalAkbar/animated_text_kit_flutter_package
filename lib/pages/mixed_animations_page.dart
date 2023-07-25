@@ -18,31 +18,67 @@ class MixedAnimationsPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AnimatedTextKit(
+              totalRepeatCount: 10,
               animatedTexts: [
-                TypewriterAnimatedText(
-                  'Hello world!',
+                RotateAnimatedText(
+                  'RotateAnimatedText',
                   textStyle: textStyle,
-                  speed: const Duration(milliseconds: 100),
+                  duration: const Duration(seconds: 3),
                 ),
               ],
-              totalRepeatCount: 4,
               pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
             ),
-            const SizedBox(height: 20),
             AnimatedTextKit(
+              totalRepeatCount: 10,
               animatedTexts: [
-                TyperAnimatedText('Android', textStyle: textStyle),
-                TyperAnimatedText('iOS', textStyle: textStyle),
-                TyperAnimatedText('Mac', textStyle: textStyle),
-                ScaleAnimatedText('Scale', textStyle: textStyle),
-                RotateAnimatedText('Rotated', textStyle: textStyle),
+                FadeAnimatedText(
+                  'FadeAnimatedText',
+                  textStyle: textStyle,
+                  duration: const Duration(seconds: 3),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                TyperAnimatedText(
+                  'TyperAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(milliseconds: 400),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'TypewriterAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(milliseconds: 400),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              repeatForever: true,
+              animatedTexts: [
+                ScaleAnimatedText(
+                  'ScaleAnimatedText',
+                  textStyle: textStyle,
+                  duration: const Duration(seconds: 1),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              isRepeatingAnimation: true,
+              repeatForever: true,
+              animatedTexts: [
                 ColorizeAnimatedText(
-                  'Colorize',
+                  'ColorizeAnimatedText',
                   textStyle: textStyle,
                   colors: [
                     Colors.red,
@@ -51,16 +87,26 @@ class MixedAnimationsPage extends StatelessWidget {
                     Colors.purple,
                     Colors.blue,
                   ],
-                ),
-                FadeAnimatedText('Fade First', textStyle: textStyle),
-                ScaleAnimatedText(
-                  'Then Scale',
-                  textStyle: const TextStyle(
-                    fontSize: 70.0,
-                    fontFamily: 'Canterbury',
-                  ),
+                  speed: const Duration(seconds: 1),
                 ),
               ],
+            ),
+            AnimatedTextKit(
+              totalRepeatCount: 5,
+              animatedTexts: [
+                WavyAnimatedText(
+                  'WavyAnimatedText',
+                  textStyle: textStyle,
+                  speed: const Duration(seconds: 1),
+                ),
+              ],
+            ),
+            AnimatedTextKit(
+              repeatForever: true,
+              animatedTexts: [
+                FlickerAnimatedText('FlickerAnimatedText', textStyle: textStyle),
+              ],
+              onTap: () => debugPrint("Tap Event Flicker Animations Page"),
             ),
           ],
         ),
