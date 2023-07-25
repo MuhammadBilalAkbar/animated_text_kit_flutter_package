@@ -139,12 +139,10 @@ samples, guidance on mobile development, and a full API reference.
 
 1. Run `dart pub add animated_text_kit` to this package in your project's pubspec.yaml file.
 2. Also add some fonts in your pubspec.yaml file to have different types of fonts in animations.
-3. Output of project:
-    ![](AnimatedTextKitFlutterPackage.webm)
-4. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
+3. `main.dart` file contains MaterialApp and theming properties of app. Its home property is calling
    HomePage widget.
-5. `home_page.dart` file contains 10 ElevatedButtons for different types of animations.
-6. To animate text using animated_text_kit flutter package:
+4. `home_page.dart` file contains 10 ElevatedButtons for different types of animations.
+5. To animate text using animated_text_kit flutter package:
     - First use `AnimatedTextKit` widget. `animatedTexts` is its required property of
       AnimatedTextKit widget accepts List<AnimatedText> of types written above.
     - Except `TextLiquidFill` animation, all animations are used within the `animatedTexts` property
@@ -157,7 +155,7 @@ samples, guidance on mobile development, and a full API reference.
 
       ![screenshot](screenshots/AnimatedTextKitProperties.png)
 
-7. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
+6. `text_liquid_fill_animations_page.dart` contains TextLiquidFill animations
     using `TextLiquidFill` directly without wrapping it with `AniamtedTextKit` widget.
 ```dart 
 Scaffold(
@@ -179,7 +177,7 @@ Scaffold(
       );
 ```
 
-9. We can also implement:
+7. We can also implement:
     - RotateAnimatedText
     - FadeAnimatedText
     - TyperAnimatedText
