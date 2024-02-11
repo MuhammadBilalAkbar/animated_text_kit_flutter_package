@@ -1,7 +1,8 @@
+import 'package:animated_text_kit_flutter_package/pages/advanced_text_animations_page.dart';
 import 'package:flutter/material.dart';
 
 import 'text_liquid_fill_animations_page.dart';
-import 'mixed_animations_page.dart';
+import 'mixed_text_animations_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage(this.title, {super.key});
@@ -32,10 +33,20 @@ class HomePage extends StatelessWidget {
                   onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) =>
-                      const MixedAnimationsPage('Mixed Animations Page'),
+                      const MixedTextAnimationsPage('Mixed Text Animations Page'),
                     ),
                   ),
-                  child: const Text('Mixed Animations Page'),
+                  child: const Text('Mixed Text Animations Page'),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>
+                      const AdvancedTextAnimationsPage('Advanced Text Animations Page'),
+                    ),
+                  ),
+                  child: const Text('Advanced Text Animations Page'),
                 ),
               ],
             ),

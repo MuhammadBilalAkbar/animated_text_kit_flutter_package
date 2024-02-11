@@ -11,19 +11,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Animated Text Kit Flutter Package',
         debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.dark,
-        darkTheme: ThemeData(
-          brightness: Brightness.dark,
+        theme: ThemeData(
           appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.blue,
             titleTextStyle: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
+            iconTheme: IconThemeData(color: Colors.white),
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              minimumSize: const Size(300, 60),
-              backgroundColor: Colors.blueGrey,
+              minimumSize: const Size(400, 80),
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
               textStyle: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -31,6 +32,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: const HomePage('Animated Text Kit Flutter Package'),
+        home: const HomePage('Animated Text Kit'),
       );
 }
